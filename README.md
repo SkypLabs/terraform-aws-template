@@ -1,16 +1,20 @@
-# Terraform Module Template
+# Terraform AWS Template
 
-Template of a minimal Terraform module.
+Template of a minimal Terraform module for AWS. It is itself based on my [Terraform
+Module Template][terraform-module-template].
 
-This module follows the [standard structure][standard-module-structure] described in the [Terraform documentation][terraform-docs].
+This module follows the [standard structure][standard-module-structure]
+described in the [Terraform documentation][terraform-docs].
 
-The following non-standard but commonly used files and folders have also been added:
+The following non-standard but commonly used files and folders have also been
+added:
 
 * `local.tf`
 * `data.tf`
 * `templates`
 
-A [pre-commit][pre-commit] configuration file is present to automatically format and validate the code and update the readme file upon Git commits.
+A [pre-commit][pre-commit] configuration file is present to automatically format
+and validate the code and update the readme file upon Git commits.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -59,3 +63,4 @@ A [pre-commit][pre-commit] configuration file is present to automatically format
  [pre-commit]: https://pre-commit.com/ "pre-commit Website"
  [standard-module-structure]: https://www.terraform.io/docs/modules/index.html#standard-module-structure "Terraform Documentation - Standard Module Structure"
  [terraform-docs]: https://www.terraform.io/docs/ "Terraform Documentation"
+ [terraform-module-template]: https://github.com/SkypLabs/terraform-module-template "SkypLabs - Terraform Module Template"
