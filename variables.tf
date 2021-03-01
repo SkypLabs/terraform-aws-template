@@ -107,3 +107,9 @@ variable "aws_s3_force_path_style" {
   type        = bool
   default     = null
 }
+
+variable "tags" {
+  description = "Tags that will be applied to all resources."
+  type        = map(string)
+  default     = {}
+}
