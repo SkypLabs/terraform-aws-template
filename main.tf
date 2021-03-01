@@ -35,4 +35,13 @@ provider "aws" {
   max_retries             = var.aws_max_retries
   allowed_account_ids     = var.aws_allowed_account_ids
   forbidden_account_ids   = var.aws_forbidden_account_ids
+
+  # https://registry.terraform.io/providers/hashicorp/aws/latest/docs#ignore_tags-configuration-block.
+  ignore_tags {
+    keys         = var.aws_ignore_tags.keys
+    key_prefixes = var.aws_ignore_tags.key_prefixes
+  }
+
+  skip_get_ec2_platforms = var.aws_skip_get_ec2_platforms
+  s3_force_path_style    = var.aws_s3_force_path_style
 }

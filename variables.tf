@@ -83,3 +83,27 @@ variable "aws_forbidden_account_ids" {
   type        = set(string)
   default     = null
 }
+
+variable "aws_ignore_tags" {
+  description = "Configuration of the AWS ignore tags block."
+  type = object({
+    keys         = set(string)
+    key_prefixes = set(string)
+  })
+  default = {
+    keys         = null
+    key_prefixes = null
+  }
+}
+
+variable "aws_skip_get_ec2_platforms" {
+  description = "Skip getting the supported EC2 platforms. Used by users that don't have 'ec2:DescribeAccountAttributes' permissions."
+  type        = bool
+  default     = null
+}
+
+variable "aws_s3_force_path_style" {
+  description = "Set this to 'true' to force the request to use path-style addressing, i.e., 'http://s3.amazonaws.com/BUCKET/KEY'. By default, the S3 client will use virtual hosted bucket addressing, 'http://BUCKET.s3.amazonaws.com/KEY', when possible. Specific to the Amazon S3 service."
+  type        = bool
+  default     = null
+}
