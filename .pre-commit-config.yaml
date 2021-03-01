@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 - repo: https://github.com/antonbabenko/pre-commit-terraform
-  rev: 16254fab5eac22dd1bf46b971c43460805cb6fa3  # frozen: v1.45.0
+  rev: 59d5965d822c91d78fcc9c890d2ab70706c14a8f  # frozen: v1.47.0
   hooks:
     - id: terraform_fmt
     - id: terraform_validate
