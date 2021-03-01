@@ -22,7 +22,9 @@ A [pre-commit][pre-commit] configuration file is present to automatically format
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| aws | ~> 3.0 |
 
 ## Inputs
 
@@ -44,7 +46,11 @@ No provider.
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| aws\_account\_id | The AWS Account ID number of the account that owns or contains the calling entity. |
+| aws\_caller\_arn | The AWS ARN associated with the calling entity. |
+| aws\_caller\_user\_id | The AWS unique identifier of the calling entity. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
