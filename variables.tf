@@ -6,6 +6,12 @@
 # Optional Variables
 # ----------------------------------------
 
+variable "enabled" {
+  description = "Whether or not this module should create any resources."
+  type        = bool
+  default     = true
+}
+
 variable "aws_access_key" {
   description = "AWS access key. It must be provided, but it can also be sourced from the 'AWS_ACCESS_KEY_ID' environment variable, or via a shared credentials file if 'aws_profile' is specified."
   type        = string

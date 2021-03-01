@@ -43,6 +43,7 @@ A [pre-commit][pre-commit] configuration file is present to automatically format
 | aws\_shared\_credentials\_file | Path to the shared credentials file. If this is not set and a profile is specified, '~/.aws/credentials' will be used. | `string` | `null` | no |
 | aws\_skip\_get\_ec2\_platforms | Skip getting the supported EC2 platforms. Used by users that don't have 'ec2:DescribeAccountAttributes' permissions. | `bool` | `null` | no |
 | aws\_token | AWS session token for validating temporary credentials. Typically provided after successful identity federation or Multi-Factor Authentication (MFA) login. With MFA login, this is the session token provided afterward, not the 6 digit MFA code used to get temporary credentials. It can also be sourced from the 'AWS\_SESSION\_TOKEN' environment variable. | `string` | `null` | no |
+| enabled | Whether or not this module should create any resources. | `bool` | `true` | no |
 | tags | Tags that will be applied to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs
