@@ -12,6 +12,16 @@ variable "enabled" {
   default     = true
 }
 
+variable "tags" {
+  description = "Tags that will be applied to all resources."
+  type        = map(string)
+  default     = {}
+}
+
+# ----------------------------------------
+# AWS Provider
+# ----------------------------------------
+
 variable "aws_access_key" {
   description = "AWS access key. It must be provided, but it can also be sourced from the `AWS_ACCESS_KEY_ID` environment variable, or via a shared credentials file if `aws_profile` is specified."
   type        = string
@@ -112,10 +122,4 @@ variable "aws_s3_force_path_style" {
   description = "Set this to `true` to force the request to use path-style addressing, i.e., `http://s3.amazonaws.com/BUCKET/KEY`. By default, the S3 client will use virtual hosted bucket addressing, `http://BUCKET.s3.amazonaws.com/KEY`, when possible. Specific to the Amazon S3 service."
   type        = bool
   default     = null
-}
-
-variable "tags" {
-  description = "Tags that will be applied to all resources."
-  type        = map(string)
-  default     = {}
 }
